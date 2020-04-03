@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:element name="Tours">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Тourist-vouchers" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Type" type="xs:string"></xs:element>
+                            <xs:element name="Country" type="xs:string"></xs:element>
+                            <xs:element name="Days" type="xs:int"></xs:element>
+                            <xs:element name="Transport" type="xs:string"></xs:element>
+                            <xs:element name="Hotel-Characteristics">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="food" type="xs:string"></xs:element>
+                                        <xs:element name="beds" type="xs:int"></xs:element>
+                                        <xs:element name="conditioner" type="xs:int"></xs:element>
+                                        <xs:element name="TV" type="xs:int"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Cost">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cost" type="xs:int"></xs:element>
+                                        <xs:element name="included" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string"></xs:attribute>
+                        <xs:attribute name="status" type="xs:string"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
